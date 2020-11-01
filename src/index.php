@@ -1,26 +1,17 @@
 <?php
 
-/*
- * Copyright: Caio Agiani 2016-2019
- * Website: https://76telecom.com.br
- * Description: Automatic API for extracting ERP tickets
- */
-
 require "config/setup.php";
 require 'class/request.php';
 
 use Telecom76\onCurl;
 
 extract($_GET);
-header('Content-Type: application/json');
-error_reporting(0);
 
 $result = [
   'total' => 0,
   'chamados' => [],
 ];
 
-// $rows['filas'] = [661, 201, 640, 676, 672, 1, 501, 521]; // ALL
 $rows = [
   ['cod' => 1, 'fila' => 'SUPORTE - NIVEL 1'],
   ['cod' => 201, 'fila' => 'SUPORTE - BLOQUEIO / DESBLOQUEIO'],

@@ -3,9 +3,7 @@
 namespace Telecom76;
 
 /**
- * Class Request cURL
  * @author @CaioAgiani
- *
  * @package 76Telecom
  */
 class onCurl
@@ -24,8 +22,6 @@ class onCurl
   }
 
   /**
-   * __contruct cUrl browser
-   *
    * @param  mixed $ur, $post
    * @return array
    */
