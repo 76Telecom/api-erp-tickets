@@ -5,8 +5,6 @@ require 'class/request.php';
 
 use Telecom76\onCurl;
 
-extract($_GET);
-
 $result = [
   'total' => 0,
   'chamados' => [],

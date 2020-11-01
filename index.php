@@ -14,4 +14,4 @@ set_time_limit(0);
 
 $_SERVER['REQUEST_METHOD'] == 'POST' ? extract($_POST) : extract($_GET);
 
-require "src/index.php";
+require "src/api.php";

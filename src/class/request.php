@@ -29,19 +29,19 @@ class onCurl
   {
     if (!$post) return file_get_contents($url);
 
-    $opts = array(
-      'http' => array(
+    $options = [
+      'http' => [
         'method' => 'POST',
         'content' => $post,
         'header' =>
-        "Content-Type: application/x-www-form-urlencoded; charset=UTF-8" .
-          "Accept-language: en\r\n" .
-          "Cookie: " . $this->cookie . "\r\n"
-      )
-    );
+        'Content-Type: application/x-www-form-urlencoded; charset=UTF-8' .
+          'Accept-language: en\r\n' .
+          'Cookie: ' . $this->cookie . '\r\n'
+      ]
+    ];
 
-    $context = stream_context_create($opts);
+    $request = stream_context_create($options);
 
-    return file_get_contents($url, false, $context);
+    return file_get_contents($url, false, $request);
   }
 }
